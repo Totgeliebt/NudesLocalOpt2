@@ -1,0 +1,23 @@
+{
+  "create nude": {
+    "section header": "Create AiNude now",
+    "recommendations": "recommendations",
+    "pose title": "Pose",
+    "pose text": "While you're exploring different creative ways to work with AiNude, keep in mind that certain poses tend to produce better results.",
+    "pose text2": "AiNude is based on a Neural Engine, so it learns with every photo submitted, but for now we recommend",
+    "pose text2 bold": "avoiding back and cross-legged photos.",
+    "clothes title": "Clothes",
+    "clothes text": "For best results we recommend",
+    "clothes text bold": "using photos with legs and arms visible.",
+    "clothes text2": "They can be covered up with clothes, but AiNude would work better if it could recognize the shape or position of the body limbs.",
+    "clothes text3 bold": "As a general rule, the more exposed the skin, the better the result.",
+    "clothes text3": "However, we strongly encourage you to experiment and see what works best.",
+    "drag": "Drag photo here",
+    "formats": "Supported formats",
+    "photo size": " Photos should be",
+    "photo size bold": "less than 1024×1024 pixels",
+    "nudify btn": "Nudify",
+    "error note": "The error occurred. Please, try again later!",
+    "wait note": "The photo processing can take some time, please, wait!"
+  }
+}

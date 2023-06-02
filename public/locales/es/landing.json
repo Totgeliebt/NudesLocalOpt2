@@ -1,0 +1,73 @@
+{
+  "header": {
+    "how it works": "Cómo funciona",
+    "about": "Acerca de nosotros",
+    "create nude": "¡Crear AiNude ahora!",
+    "login": "Entrar",
+    "registration": "Crear una cuenta",
+    "balance": "Recargar",
+    "photos": "Mis fotos",
+    "log out": "Salir"
+  },
+  "popup": {
+    "login text": "Ingresa para continuar",
+    "login placeholder": "Ingresa su usuario",
+    "pswd placeholder": "Ingresa su clave",
+    "log in": "Entrar",
+    "login": "Usuario",
+    "registration": "Regístrate",
+    "invalid login": "Usuario o clave incorrecto",
+    "register text": "Crea una cuenta para continuar ",
+    "login restrictions": "Sólo letras latinas y números",
+    "pswd restrictions": "Sólo letras latinas, números y los caracteres especiales",
+    "attention": "Asegúrate de recordar tu contraseña, ya que no la almacenamos por motivos de privacidad",
+    "user exists": "Usuario ya existe.",
+    "try another user": "Intenta otra vez o entra."
+  },
+  "general": {
+    "main heading": "Convierta cualquier foto en una versión desnuda",
+    "description": "utilizando un potente procesamiento de fotos con un clic a través de inteligencia artificial",
+    "create nude btn": "¡Crea una nueva foto AiNudes!",
+    "how many nudes": "AINudes se han creado desde el comienzo de COVID-19"
+  },
+  "AI": {
+    "ai": "AI ",
+    "section heading": "entre bastidores",
+    "about AI": "Nuestra tecnología de Inteligencia Artificial Avanzada, la IA generativa, convierte cada foto de una persona vestida en una nueva foto desnuda de esa persona.",
+    "algorithm": "Este algoritmo es similar al que se usa en los videos deepfake y al que usan los autos sin conductor para 'imagine' escenarios de tráfico.  La foto nude creado por AiNude se ve muy realista y se considerará una foto nude real en la mayoría de los casos."
+  },
+  "clothes": {
+    "works with": "Funciona para",
+    "all types of clothes": "todos tipos de ropa",
+    "section heading": "del bikini al vestido de novia",
+    "unlike": "A diferencia de otros programas similares que solo funcionan con fotos en bikini, el algoritmo AiNude funciona absolutamente bien con todos tipos de ropa.",
+    "no longer": "Ya no necesitas buscar fotos en bikini, solo usa las que tienes.  Jeans, blusas, faldas, sudaderas con capucha, cárdigans o incluso un vestido de novia: nuestra IA procesará cualquier tipo de foto y le brindará el mejor resultado."
+  },
+  "shapes": {
+    "works fine with": "Funciona bien con",
+    "section heading": "diferentes formas y poses",
+    "women": "Las mujeres merecen ser vistas desde todos los ángulos.  AiNude admite fotos tomadas desde diferentes ángulos y exponiendo todo tipo de poses de mujeres.",
+    "inclusive": "AiNude también es muy inclusivo y desnuda a mujeres de todos los tamaños y nacionalidades."
+  },
+  "how it works": {
+    "section heading": "Cómo funciona",
+    "upload here": "Subir una foto aquí",
+    "upload title": "Subir",
+    "upload text": "Elige la foto de una mujer que te gustaría desnudar",
+    "adjust title": "Ajustar",
+    "adjust text": "Escala y coloca la foto como quieres.",
+    "submit title": "Enviar",
+    "submit text": "Nuestros servidores harán la magia y la desnudarán por ti en cuestión de segundos.",
+    "result title": "Obtén resultado",
+    "result text": "¡Disfruta la hermosura!",
+    "try": "Pruébalo con otra foto"
+  },
+  "media": {
+    "section heading": "Media acerca de nosotros",
+    "porn hub": "¡El software que hemos estado esperando por mucho tiempo!  Finalmente, la tecnología está en su lugar.",
+    "forbes": "Una forma más rica y divertida de entretenerte en cualquier fiesta",
+    "verge": "El AiNudes no es perfecto, pero podría confundirse fácilmente con algo real",
+    "buzzfeed": "Se siente como si cada persona pudiera ser desnudada y expuesta. Demasiado poderoso para estar disponible para todos",
+    "create nude btn": "¡Crea una nueva foto AiNude ahora mismo!"
+  }
+}

@@ -1,0 +1,18 @@
+{"terms of use": {
+  "about": "About",
+  "privacy": "Privacy policy",
+  "terms": "Terms of Use",
+  "terms of use": "Terms of Use",
+  "last modified": "Last modified date: May 17, 2021",
+  "company info title": "COMPANY INFORMATION",
+  "company info text": ["This website (hereinafter referred to as the 'Service') is operated by AiNude Inc. Throughout the Site, the terms “we”, “us”, “our”, refer to AiNude Inc. The use of our Service is governed by the following Terms of Use and Privacy Policy.", "Our Service offers information, tools and services available to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.", "These Terms of Use affect your legal rights and obligations and have been written to provide a high-quality service.", "Please read these Terms of Use before using our Service. Your use of our Service indicates your acceptance of these Terms of Use. If you do not agree to be bound by all of these Terms of Use, please do not use our Service."],
+  "general provisions title": "1.GENERAL PROVISIONS",
+  "general provisions text": ["We provide a powerful image processing and retouching AI-based service.","Retouching is defined as an internal work of our machine-learning AI algorithm, which processes and modifies submitted photos.","The Customer is defined as an Account profile of every user that launches our Service and has a unique Client id. All photos processed and retouched by the Service are owned by the customer. The customer can dispose of a retouched/processed photo at his/her discretion.","Credits are defined as in-app purchase currency of the Service.","Retouched photo (or Order) is defined as an image that is sent by the Customer for retouching which is then processed by our Service. Customer can send the Order for retouching only using Credits.","After sending the Order for retouching/processing it can't be canceled by the Customer. Processed photos are provided as-is and may vary greatly in quality.", "Processed photos are provided as a result to the Customer, and can then be downloaded and stored locally by the Customer. Service does not store or preserve neither original photo nor processed photo."],
+  "credit title": "2.CREDIT PACKAGES",
+  "credit text":["Credit packages offer access to a certain number of Credits and don't have an expiration date. They can be purchased from inside the Service.","Every single Order requires 1 Credit to be processed by our Service."],
+  "refund title": "3.REFUND POLICY",
+  "refund text": "Every single Order requires 1 Credit to be processed by our Service.",
+  "changes title": "4.CHANGES TO TERMS OF USE",
+  "changes text": "Our Service may change from time to time. As a result, at times it may be necessary for us to make changes to these TERMS OF USE. We reserve the right to update or modify these TERMS OF USE at any time without prior notice. These TERMS OF USE were last updated on the date indicated above. All modifications of TERMS OF USE replace and cancel previous stipulations as soon as they have been accepted expressly or tacitly by Customer."
+}
+}

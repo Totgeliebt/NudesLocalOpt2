@@ -1,0 +1,19 @@
+{ "terms of use": {
+  "about": "Acerca de nosotros",
+  "privacy": "Política de privacidad",
+  "terms": "Términos de Uso",
+  "terms of use": "Términos de Uso",
+  "last modified": "Fecha de última modificación: el 17 de mayo de 2021",
+  "company info title": "INFORMACIÓN DE LA EMPRESA",
+  "company info text": ["Este sitio web (en adelante, el 'Servicio') es operado por AiNude Inc. En todo el Sitio, los términos 'nosotros', 'nos', 'nuestro', se refieren a AiNude Inc. El uso de nuestro Servicio se rige  por los siguientes Términos de uso y Política de privacidad.","Nuestro Servicio ofrece información, herramientas y servicios disponibles para usted, el usuario, condicionado a su aceptación de todos los términos, condiciones, políticas y avisos establecidos aquí.","Estos Términos de uso afectan sus derechos y obligaciones legales y se redactaron para brindar un servicio de alta calidad.","Lee estos Términos de uso antes de usar nuestro Servicio.  Su uso de nuestro Servicio indica su aceptación de estos Términos de uso.  Si no acepta estar sujeto a todos estos Términos de uso, no use nuestro Servicio."],
+  "general provisions title": "1.PROVISIONES GENERALES",
+  "general provisions text": ["Brindamos un potente servicio de procesamiento y retoque de fotos basado en IA.","El retoque se define como un trabajo interno de nuestro algoritmo de IA de aprendizaje automático, que procesa y modifica las fotos enviadas."," Cliente se define como un perfil de Cuenta de cada usuario que inicia nuestro Servicio y tiene una identificación de Cliente única.  Todas las fotos procesadas y retocadas por el Servicio son propiedad del cliente.  El cliente puede disponer de una foto retocada/procesada a su discreción.","Los créditos se definen como moneda de compra en la aplicación del Servicio.","La foto retocada (o Pedido) se define como una foto que envía el Cliente para retocar y luego es procesada por nuestro Servicio.  El Cliente puede enviar el Pedido para retoque solo usando Créditos.","Después de enviar el Pedido para retoque/procesamiento, no puede ser cancelado por el Cliente.  Las fotos procesadas se proporcionan tal cual y pueden variar mucho en calidad.", "Las fotos procesadas se proporcionan como resultado al Cliente, y luego el Cliente puede descargarlas y almacenarlas localmente.  El servicio no almacena ni conserva ni la foto original ni la foto procesada."
+  ],
+  "credit title": "2.PAQUETES DE CRÉDITO",
+  "credit text": ["Los paquetes de crédito ofrecen acceso a una cierta cantidad de créditos y no tienen fecha de vencimiento.  Se pueden comprar desde dentro del Servicio.","Cada Pedido individual requiere 1 Crédito para ser procesado por nuestro Servicio."],
+  "refund title": "3.POLITICA DE REEMBOLSO",
+  "refund text": "Cada Pedido individual requiere 1 Crédito para ser procesado por nuestro Servicio.",
+  "changes title": "4.CAMBIOS A LOS TÉRMINOS DE USO",
+  "changes text": "Nuestro Servicio puede cambiar de vez en cuando.  Como resultado, en ocasiones puede ser necesario que hagamos cambios a estos TÉRMINOS DE USO.  Nos reservamos el derecho de actualizar o modificar estos TÉRMINOS DE USO en cualquier momento sin previo aviso.  Estos TÉRMINOS DE USO se actualizaron por última vez en la fecha indicada anteriormente.  Toda modificación de las CONDICIONES DE USO sustituye y anula las estipulaciones anteriores tan pronto como hayan sido aceptadas expresa o tácitamente por el Cliente."
+}
+}

@@ -1,0 +1,30 @@
+{
+
+
+
+
+  "deposit": {
+    "section header": "Deposit",
+    "choose": "Choose how many coins → Select the number of images (1$ for one)",
+    "photos available": "Photos available",
+    "free": "FREE",
+    "payment method": "Select a Payment Method",
+    "pay btn": "Pay",
+    "photos": "photos",
+    "photo": "photo",
+    "processing": "You have 0 photos ",
+    "processing br" : "processing"
+  },
+  "my photos": {
+    "no photos": {
+"title" : "You don't have edited photos yet.",
+"link" : "Try adding the first photo."
+},
+"shown": "Shown",
+"out of": "out of",
+    "error": "Error, you need to try again.",
+    "section header": "My photos",
+    "add photo btn": "Add photo",
+    "processing": "Processing"
+  }
+}

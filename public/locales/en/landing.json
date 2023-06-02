@@ -1,0 +1,72 @@
+{ "header": {
+  "how it works": "How it works",
+  "about": "About",
+  "create nude": "Create AiNude now!",
+  "login": "Login",
+  "registration": "Registration",
+  "balance": "Top up balance",
+  "photos": "My photos",
+  "log out": "Log out"
+},
+  "popup": {
+    "login text": "Log in to continue",
+    "login placeholder": "Enter login",
+    "pswd placeholder": "Enter password",
+    "log in": "Log in",
+    "login": "Login",
+    "registration": "Registration",
+    "invalid login": "Invalid login or password",
+    "register text": "Register to continue",
+    "login restrictions": "Only Latin letters and numbers",
+    "pswd restrictions": "Only Latin letters, numbers and special characters",
+    "attention": "Make sure you remember your password as we do not store it for privacy purposes",
+    "user exists": "User already exists.",
+    "try another user": "Try another one or log in."
+  },
+  "general": {
+    "main heading": "Turn any photo into nude version",
+    "description": "using powerful image processing with one click through artificial intelligence",
+    "create nude btn": "Create AiNude photo now!",
+    "how many nudes": "AINudes have been created since the start of COVID-19"
+  },
+  "AI": {
+    "ai": "AI",
+    "section heading": "behind the scenes",
+    "about AI": "Our Advanced AI Technology, Generative Adversarial Networks (GAN),uses a photo of a clothed person and creates a new naked image of that person.",
+    "algorithm": "This algorithm is similar to the one used in deepfake videos and the one used by self-driving cars to 'imagine' traffic scenarios. The resulting nude image looks very realistic and will be considered a real nude photo in most cases."
+  },
+  "clothes": {
+    "works with": "Works with",
+    "all types of clothes": "all types of clothes",
+    "section heading": "from bikini to wedding dress",
+    "unlike": "Unlike all other similar but low-profile programs that will only work with bikini photos, the AiNude algorithm works absolutely fine with different types of clothing.",
+    "no longer": "You no longer need to search for bikini photos, just use the ones you have. Jeans, tops, skirts, hoodies, cardigans or even a wedding dress - our AI will process any type of photo and give you the best result."
+  },
+  "shapes": {
+    "works fine with": "Works fine with",
+    "section heading": "different shapes & poses",
+    "women": "Women deserve to be seen from every angle. AiNude supports photos taken from different angles and exposing all kinds of women's poses.",
+    "inclusive": "AiNude is also very inclusive and strips women of all sizes and nationalities."
+  },
+  "how it works": {
+    "section heading": "How it works",
+    "upload here": "Upload here",
+    "upload title": "Upload",
+    "upload text": "Choose a woman’s photo that you would like to nudify.",
+    "adjust title": "Adjust",
+    "adjust text": "Scale and position the photo the way you like.",
+    "submit title": "Submit",
+    "submit text": "Our servers will do the magic and nudify it for you in a matter of seconds.",
+    "result title": "Get result",
+    "result text": "Enjoy the beauty!",
+    "try": "Try with your photo"
+  },
+  "media": {
+    "section heading": "Media about us",
+    "porn hub": "Software we’ve been waiting for ages! Finally, technology is in place.",
+    "forbes": "A dangerous, yet funny way to entertain yourself at any party",
+    "verge": "The AiNudes isn’t perfect, but could easily be mistaken for the real thing",
+    "buzzfeed": "It feels like every person could be undressed and exposed. Too powerful to be available to everyone",
+    "create nude btn": "Create AiNude photo now!"
+  }
+}

@@ -1,0 +1,56 @@
+{ "privacy policy": {
+  "about": "About",
+  "terms": "Terms of Use",
+  "privacy": "Privacy policy",
+  "last modified": "Last modified date: May 17, 2021",
+  "general title": "1.GENERAL",
+  "general text": "This website (hereinafter referred to as the 'Service') is operated by AiNude Inc. Throughout the Site, the terms “we”, “us”, “our”, refer to AiNude Inc. The use of our Service is governed by the following Terms of Use and Privacy Policy.",
+  "general text_1": "This Privacy Policy explains what information that can identify you ('Personal Data') will be collected by our Service when you use it, how the Personal Data will be used, and how we process, share and protect your Personal Data. Please read the following carefully to understand our views and practices regarding your Personal Data.",
+  "who we are title": "2.WHO WE ARE",
+  "who we are text": "Acting as a data controller, we are committed to protecting and respecting your privacy. If you have any questions or requests concerning your Personal Data, you may contact our Data Protection Officer (\"DPO\") at support@splazzo.com.",
+  "info title": "3.INFORMATION WE COLLECT.",
+  "info text": " We collect the following data about you:",
+  "info subtitle1": "3.1. Information you give us:",
+  "info subtext1": [
+    "You may give us information and your Personal Data, when you use our Service, by filling in forms (such as the sign-up or sign-in form), when you enter into any of our promotions or surveys, when you correspond with us by e-mail and when you use the “Support” form in our Service.",
+    "The information you give us may include: "
+  ],
+  "info subtext1 list": [
+    "Signature to identify Client on the Service (Client id).",
+    "Mandatory information required to Sign up on our Service,including your name and email address.",
+    "Country of your location.",
+    "Mobile device model.",
+    "The time when the Order was sent and received by Customer.",
+    "The number of Credits that Customer paid for Service (on-site purchase currency).",
+    "Information we may require from you when you report a problem to ur Support Team, such as the subject of your request for support."
+  ],
+  "info subtitle2": "3.2. Information we collect automatically:",
+  "info subtext2": [
+    "Cookie Information: In operating the Service, we may also use a technology called “cookies.” A cookie is a piece of information that the computer that hosts our Service gives to your browser when you access the Service. Our cookies help provide additional functionality to the Service and help us analyze its usage more accurately. It doesn't collect Personal Data about you.",
+    "Log File Information: Log file information is automatically reported by your browser each time you access our Service. We automatically record certain information that your web browser sends whenever you visit any website. These server logs may include information such as your web request, Internet Protocol (“IP”) address, browser type, referring / exit pages and URLs, number of clicks, domain names, landing pages, pages viewed, advertising identifier, download errors and other such information."
+  ],
+  "how use info title": "4.HOW WE USE THE INFORMATION",
+  "how use info": "We use the information we collect:",
+  "how use info text": [
+    "to execute the order and provide retouching service;",
+    "to provide you with the information and services that you requested from us;",
+    "to give you access to our support services. By providing your email address you consent to our using the email address to answer your question or resolve your problem;",
+    "to notify you about changes on our Service;",
+    "to purposes such as analyzing how the Service is used, diagnosing service or technical problems;",
+    "to improve the Service to ensure that content is presented in the most effective manner for you and for your device;",
+    "as part of our efforts to keep our Service safe and secure;",
+    "to ensure compliance with (i) applicable laws, (ii) our Terms and Conditions, and (iii) our Privacy Notice. Certain breaches that we regard as inappropriate may lead to the suspension of your Account profile"
+  ],
+  "how use info also": "Also, we use cookies and log file information to:",
+  "how use info also text": [
+    "provide custom, personalized content and information;",
+    "monitor the effectiveness of our Service;",
+    "monitor aggregate metrics such as total number of visitors and traffic;",
+    "diagnose or fix technology problems reported by our users or engineers that are associated with the IP addresses controlled by a specific web company or ISP."
+  ],
+  "how we share title": "5.HOW WE SHARE THE INFORMATION",
+  "how we share text": ["We will not rent or sell your Personal Data to others and will not share it with others except as provided herein.","We may share your personally identifiable information with third parties solely for the purpose of providing services to you. If we do this, such third parties’ use of your information will be bound by this Privacy Policy. We may store personal information in locations outside the direct control of our Service (for instance, on servers or databases co-located with hosting providers).","As we develop our business, we may buy or sell assets or business offerings. Information we collect is generally one of the transferred business assets in these types of transactions. We may also transfer such information in the course of corporate divestitures, mergers, or dissolution.", "When you use our Service, some of your Personal Data is shared with our Support team."],
+  "how we protect title": "6.HOW WE PROTECT YOUR INFORMATION",
+  "how we protect text": ["We work hard to protect your privacy and collect only the data we need to make your experience better. We make commercially reasonable efforts to ensure the security of our systems. However, no Internet, email or other electronic transmission is ever fully secure or error free and while we strive to use commercially acceptable means to protect data, we cannot guarantee its absolute security.", "The website uses SSL encryption that ensures the confidentiality of your information in the transmission of data. In no case, we do collect store, or transfer data from your card. The payment operations are carried out entirely through the secure server of our payment gateways. They will not sell, purchase, provide, exchange or in any other manner disclose Account or Transaction data, or personal information of or about a Cardholder to anyone, except, it’s Acquirer, Card networks/associations, or in response to valid government demands."]
+}
+}

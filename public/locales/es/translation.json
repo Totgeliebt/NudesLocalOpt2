@@ -1,0 +1,30 @@
+{
+
+
+
+
+  "deposit": {
+    "section header": "Recargar",
+    "choose": "Elija cuántas monedas → Selecciona la cantidad de fotos (1$ por una)",
+    "photos available": "fotos disponibles",
+    "free": "GRATIS",
+    "payment method": "Elija un Método de Pago",
+    "pay btn": "Pagar",
+    "photos": "fotos",
+    "photo": "foto",
+    "processing": "Tienes 0 fotos",
+    "processing br" : "en procesamiento"
+  },
+  "my photos": {
+    "no photos": {
+      "title": "Aún no tienes fotos editadas.",
+      "link" : "Intenta agregar la primera foto."
+    },
+    "shown": "Se muestra",
+    "out of": "de",
+    "error": "Error, inténtalo de nuevo.",
+    "section header": "Mis fotos",
+    "add photo btn": "Agregar una foto",
+    "processing": "Procesamiento"
+  }
+}
