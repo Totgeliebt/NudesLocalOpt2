@@ -14,13 +14,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <ErrorBoundary>
+      {/*<ErrorBoundary>*/}
         <BrowserRouter>
           <GalleryProvider>
             <App />
           </GalleryProvider>
         </BrowserRouter>
-      </ErrorBoundary>
+      {/*</ErrorBoundary>*/}
     </PersistGate>
   </Provider>
 );

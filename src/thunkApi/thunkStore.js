@@ -4,11 +4,13 @@ import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import imagesSlice from "./imagesSlice";
 import depositSlice from "./depositSlice";
+import authSlice from "./authSlice";
 
 const reducers = combineReducers({
   user: userSlice,
   images: imagesSlice,
   deposit: depositSlice,
+  auth: authSlice
 });
 
 const persistConfig = {

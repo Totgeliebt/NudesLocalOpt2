@@ -2,10 +2,10 @@ import { useLocation, Navigate, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const RequireAuth = () => {
-  const token = useSelector((state) => state.user.user.authToken);
+  const isLoggedIn = useSelector((state) => state?.auth.isLoggedIn);
   const location = useLocation();
 
-  return token ? (
+  return isLoggedIn ? (
     <Outlet />
   ) : (
     <Navigate to="/landing" state={{ from: location }} replace />

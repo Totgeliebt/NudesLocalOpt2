@@ -1,68 +1,144 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import {handleServerError} from "../utils/helpers";
+import axios from "axios";
 
 export const getImageList = createAsyncThunk(
   "images/getImageList",
-  async (token, { rejectWithValue, dispatch }) => {
+  async ({user, password}, { rejectWithValue, dispatch }) => {
     try {
-      const response = await fetch(
+      console.log(user, password)
+      const response = await axios.get(
         `${process.env.REACT_APP_BASE_URL}/v1/images/list`,
         {
+          withCredentials: true,
           headers: {
+            Accept: "application/json",
             "Content-Type": "application/json",
-            auth: token,
+          },
+          auth: {
+            username: user,
+            password: password,
           },
         }
       );
-      handleServerError(response, dispatch)
-      const data = await response.json();
-      return data;
+      // handleServerError(response, dispatch)
+      console.log('image list',response)
+      return response.data;
     } catch (error) {
-      return rejectWithValue(error.message);
-    }
-  }
-);
-export const addNewImage = createAsyncThunk(
-  "images/addNewImage",
-  async ({ token, image }, { rejectWithValue, dispatch }) => {
-    try {
-      console.log("Вызов addNewImage ====> ", { token, image });
-      const response = await fetch(
-        `${process.env.REACT_APP_BASE_URL}/v1/images/new`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            auth: token,
-          },
-          body: JSON.stringify(image),
-        }
-      );
-      handleServerError(response, dispatch)
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      return rejectWithValue(error.message);
+      // return rejectWithValue(error.message)
+      console.log(error)
+      return Promise.reject();
     }
   }
 );
 
+
+export const addNewImage = createAsyncThunk(
+  "images/addNewImage",
+  async ({ user, password, image }, { rejectWithValue, dispatch }) => {
+    try {
+      let bodyFormData = new FormData();
+      bodyFormData.append('image', image);
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/v1/images/new?`, bodyFormData,{
+        withCredentials: true,
+        headers: {
+          // Accept: "application/json",
+          "Content-Type": "multipart/form-data",
+        },
+        auth: {
+          username: user,
+          password: password,
+        },
+      });
+      // handleServerError(response, dispatch)
+      console.log('added new image',response.data)
+      return response.data
+    } catch (error) {
+      console.log(error)
+      return Promise.reject();
+
+    }
+  }
+);
+
+export const getImageBefore = createAsyncThunk(
+  "images/getImageBefore",
+  async ({ user, password, imageId }, { rejectWithValue, dispatch }) => {
+    try {
+      console.log(imageId)
+      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/v1/images/get?image_id=${imageId}&flag=0`,{
+        withCredentials: true,
+        responseType: 'blob',
+        headers: {
+          Accept: "application/json",
+          // "Content-Type": "multipart/form-data",
+        },
+        auth: {
+          username: user,
+          password: password,
+        },
+      });
+      handleServerError(response, dispatch)
+      const imgUrl = URL.createObjectURL(response.data);
+            console.log(imgUrl)
+            return imgUrl
+    } catch (error) {
+      console.log(error)
+      // return Promise.reject();
+
+    }
+  }
+);
+export const getImageAfter = createAsyncThunk(
+  "images/getImageAfter",
+  async ({ user, password, imageId }, { rejectWithValue, dispatch }) => {
+    try {
+console.log(imageId)
+      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/v1/images/get?image_id=${imageId}&flag=1`,{
+        withCredentials: true,
+        responseType: 'blob',
+        headers: {
+          // Accept: "application/json",
+          "Content-Type": "multipart/form-data",
+        },
+        auth: {
+          username: user,
+          password: password,
+        },
+      });
+      // handleServerError(response, dispatch)
+      const imgUrl = URL.createObjectURL(response.data);
+      console.log(imgUrl)
+      return imgUrl
+    } catch (error) {
+      console.log(error)
+      return Promise.reject();
+
+    }
+  }
+);
 export const checkImageState = createAsyncThunk(
   "images/checkImageState",
-  async ({ imageId, token }, { rejectWithValue, dispatch }) => {
+  async ({ imageId, user, password }, { rejectWithValue, dispatch }) => {
     try {
-      const response = await fetch(
-        `${process.env.REACT_APP_BASE_URL}/v1/images/check?image_id=${imageId}`,
+      console.log(user, password, imageId)
+      const response = await axios.get(
+        `${process.env.REACT_APP_BASE_URL}/v1/images/check?image=${imageId}`,
         {
+          withCredentials: true,
           headers: {
+            Accept: "application/json",
             "Content-Type": "application/json",
-            auth: token,
+          },
+          auth: {
+            username: user,
+            password: password,
           },
         }
       );
       handleServerError(response, dispatch)
-      const data = await response.json();
-      return data;
+       console.log('check image state',response.data)
+      return response.data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -83,6 +159,8 @@ const imagesSlice = createSlice({
         state: null,
       },
     ],
+    before: '',
+    after: '',
     status: null,
     error: null,
     popup: {
@@ -93,13 +171,16 @@ const imagesSlice = createSlice({
   },
   reducers: {
     getAllImages(state, action) {
+      console.log(action.payload)
       state.images.push(action.payload);
     },
     uploadImage(state, action) {
+      console.log(action.payload)
       state.images.push(action.payload);
     },
     updateImage(state, action) {
       const { imageId, stateCard } = action.payload;
+      console.log(action.payload)
       state.images.forEach((image) => {
         if (image.imageId === imageId) {
           image.state = stateCard;
@@ -107,13 +188,15 @@ const imagesSlice = createSlice({
       });
     },
     addImage(state, action) {
-      const { imageId } = action.payload;
+      console.log(action.payload)
+      const { imageId } = action.payload.data;
       state.images.push({
         imageId,
         state: 0,
       });
     },
     checkState(state, action) {
+      console.log(action.payload)
       state.images.push(action.payload);
     },
     showPopup(state, action) {
@@ -136,6 +219,12 @@ const imagesSlice = createSlice({
     },
     [getImageList.rejected]: setError,
     [addNewImage.fulfilled]: (state, action) => {
+      console.log(action.payload)
+      const { imageId } = action.payload.data;
+      state.images.push({
+        imageId,
+        state: 0,
+      });
       state.status = "resolved";
     },
     [addNewImage.pending]: (state) => {
@@ -143,6 +232,26 @@ const imagesSlice = createSlice({
       state.error = null;
     },
     [addNewImage.rejected]: setError,
+    [getImageBefore.fulfilled]: (state, action) => {
+      console.log(action.payload)
+      state.before = action.payload
+      state.status = "resolved";
+    },
+    [getImageBefore.pending]: (state) => {
+      state.status = "loading";
+      state.error = null;
+    },
+    [getImageBefore.rejected]: setError,
+    [getImageAfter.fulfilled]: (state, action) => {
+      console.log(action.payload)
+      state.after = action.payload
+      state.status = "resolved";
+    },
+    [getImageAfter.pending]: (state) => {
+      state.status = "loading";
+      state.error = null;
+    },
+    [getImageAfter.rejected]: setError,
     [checkImageState.fulfilled]: (state, action) => {
       state.status = "resolved";
     },

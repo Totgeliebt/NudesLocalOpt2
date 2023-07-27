@@ -9,7 +9,7 @@ import UserMenu from "./UserMenu";
 import OnOutsideClick from "react-outclick";
 import LoginButton from "./LoginButton";
 import { useDispatch, useSelector } from "react-redux";
-import { showPopup } from "../../thunkApi/userSlice";
+import {showPopup, userBalance} from "../../thunkApi/userSlice";
 import { useNavigate } from "react-router-dom";
 import CustomLink from "./CustomLink";
 import {useTranslation} from "react-i18next";
@@ -19,7 +19,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const [activeWait, setActiveWait] = useState(false);
   const [isDropdownShown, setIsDropdownShown] = useState(false);
-  const token = useSelector((state) => state.user.user?.authToken);
+  const isLoggedIn = useSelector((state) => state?.auth?.isLoggedIn);
   const navigate = useNavigate();
   const [burgerActive, setBurgerActive] = useState(false);
   const [menuMobileActive, setMenuMobileActive] = useState(false);
@@ -90,7 +90,7 @@ const Header = () => {
                 }
                 to="create-nude"
                 onClick={
-                  token
+                  isLoggedIn
                     ? () => {
                         navigate("create-nude");
                       }
@@ -102,8 +102,7 @@ const Header = () => {
                 {lng["create nude"]}
               </NavLink>
             </div>
-
-            {token ? (
+            {isLoggedIn ? (
               <OnOutsideClick
                 onOutsideClick={() => {
                   setIsDropdownShown(false);
@@ -126,7 +125,6 @@ const Header = () => {
           </div>
         </header>
       </StyledHeader>
-
       <Login handlePopup={handlePopup} />
       <Registration handlePopup={handlePopup} />
       <Notification activeWait={activeWait} setActiveWait={setActiveWait} />

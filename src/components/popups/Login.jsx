@@ -1,29 +1,31 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import MyButton from "../MyButton";
 import { StyledLogin, StyledPopups } from "../../styles/StyledPopups";
 import back from "../../assets/icons/back-icon.svg";
 import logo from "../../assets/icons/logo.svg";
 import MyInput from "../MyInput";
 import { useDispatch, useSelector } from "react-redux";
-import { auth } from "../../thunkApi/userSlice";
-import {useTranslation} from "react-i18next";
+import { userBalance} from "../../thunkApi/userSlice";
+import { useTranslation } from "react-i18next";
+import { basicAuth, saveUser } from "../../thunkApi/authSlice";
 
 const Login = ({ handlePopup }) => {
   const popup = useSelector((state) => state.user.popup);
- const [error, setError] = useState('')
+  const authStatus = useSelector((state) => state?.auth?.status);
+  const error = useSelector((state) => state?.auth?.error);
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
-  const { t } = useTranslation('landing')
-  const lng = t("popup", {returnObjects: true})
+  const { t } = useTranslation("landing");
+  const lng = t("popup", { returnObjects: true });
   const dispatch = useDispatch();
-  const userData = { userName: user, userPassword: password };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(auth(userData))
-      .then(data =>{
-        setError(data.payload)})
-      .catch(error => console.log(error));
+    dispatch(basicAuth({ user, password }))
+    dispatch(userBalance({user, password }))
+    if(authStatus === "fulfilled") {
+      handlePopup(false)
+    }
   };
 
   return (
@@ -42,8 +44,7 @@ const Login = ({ handlePopup }) => {
                 src={back}
                 alt="go back"
                 onClick={() => handlePopup(false)}
-              >
-              </img>
+              ></img>
               <div
                 className="registration"
                 onClick={() => handlePopup(true, "reg")}
@@ -68,7 +69,7 @@ const Login = ({ handlePopup }) => {
               />
               <p
                 className={
-                  error === '400'
+                  error === "400"
                     ? "user_not_found"
                     : "user_not_found invisible"
                 }

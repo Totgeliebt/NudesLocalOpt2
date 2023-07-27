@@ -60,7 +60,6 @@ const CreateNudeComponent = ({handleFileSubmit,getInputProps,getRootProps,handle
                     <img className="format_icon" src={jpeg} alt="jpeg" />
                     <img className="format_icon" src={png} alt="png" />
                   </div>
-
                   <StyledPCreate>
                     {lng["photo size"]} <br />
                     <b> {lng["photo size bold"]}</b>

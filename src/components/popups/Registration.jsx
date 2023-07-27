@@ -6,29 +6,32 @@ import MyInput from "../MyInput";
 import MyButton from "../MyButton";
 import caution from "../../assets/icons/caution-icon.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { registration } from "../../thunkApi/userSlice";
+import {registration, userBalance} from "../../thunkApi/userSlice";
 import { StyledRegex } from "../../styles/StyledP";
 import {useTranslation} from "react-i18next";
+import {registrationUser, saveUser} from "../../thunkApi/authSlice";
 
 const Registration = ({ handlePopup }) => {
   const popup = useSelector((state) => state.user.popup);
+  const error = useSelector((state) => state?.auth?.error);
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
-  const [errorReg, setErrorReg] = useState('')
   const queryParams = new URLSearchParams(window.location.search);
   const clickid = queryParams.get("clickid");
   const { t } = useTranslation('landing')
   const lng = t("popup", {returnObjects: true})
   const dispatch = useDispatch();
 
-  const userData = { userName: user, userPassword: password, clickId: '' };
+  const userData = { userName: user, password: password, clickId: "1241dsg-3523-dsgsdg" };
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
-    dispatch(registration(userData))
-      .then(data =>{
-        setErrorReg(data.payload)})
-      .catch(error => console.log(error));
+    dispatch(registrationUser({userData}))
+    // dispatch(userBalance({user, password}))
+    if(error === "200") {
+      handlePopup(false, "reg")
+      handlePopup(true, "login")
+    }
   };
   return (
     <StyledPopups>
@@ -94,35 +97,24 @@ const Registration = ({ handlePopup }) => {
               />
               <StyledRegex>
                 {lng["pswd restrictions"]}
-                {/*<span*/}
-                {/*  className={*/}
-                {/*    password.length !== 0*/}
-                {/*      ? password.length === 8*/}
-                {/*        ? "green"*/}
-                {/*        : "red"*/}
-                {/*      : null*/}
-                {/*  }*/}
-                {/*>*/}
-                {/*  {password.length}/8*/}
-                {/*</span>*/}
               </StyledRegex>
               <img
                 className={
-                  errorReg === '400'||errorReg === '409' ? "caution invisible" : "caution"
+                  error === '400'||error === '409' ? "caution invisible" : "caution"
                 }
                 src={caution}
                 alt="caution"
               />
               <p
                 className={
-                  errorReg === '400'||errorReg === '409' ? "attention invisible" : "attention"
+                  error === '400'||error === '409' ? "attention invisible" : "attention"
                 }
               >
                 {lng["attention"]}
               </p>
               <p
                 className={
-                  errorReg === '400'||errorReg === '409'
+                  error === '400'||error === '409'
                     ? "user_exists"
                     : "user_exists invisible"
                 }

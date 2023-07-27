@@ -10,8 +10,10 @@ import {useTranslation} from "react-i18next";
 
 const PaginatedPhotos = () => {
   const dispatch = useDispatch();
-  const token = useSelector((state) => state.user.user?.authToken);
-  const imageList = useSelector((state) => state.images.images);
+  const user = useSelector((state) => state?.auth?.user.user);
+  const password = useSelector((state) => state?.auth?.user.password);
+  console.log(user, password)
+  const imageList = useSelector((state) => state?.images.images);
   const { t } = useTranslation()
   const lng = t("my photos", {returnObjects: true})
 
@@ -26,7 +28,7 @@ const PaginatedPhotos = () => {
   const endOffset = itemOffset + itemsPerPage;
   const currentPhoto = [...imageList].reverse()?.slice(itemOffset, endOffset);
   useEffect(() => {
-    dispatch(getImageList(token));
+    dispatch(getImageList({user, password}));
     setPageCount(Math.ceil(imageList.length / itemsPerPage));
   }, []);
   if (!imageList?.length) {
